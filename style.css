@@ -1,0 +1,124 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Cairo', sans-serif; line-height: 1.8; background-color: #0b0e11; color: #e0e0e0; text-align: center; }
+
+header { background: #161b22; padding: 20px 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #30363d; }
+nav { display: flex; justify-content: space-around; align-items: center; }
+.logo { color: #58a6ff; font-size: 1.6rem; font-weight: bold; text-shadow: 0 0 10px rgba(88, 166, 255, 0.3); }
+nav ul { display: flex; list-style: none; }
+nav ul li a { color: #8b949e; text-decoration: none; padding: 0 15px; transition: 0.3s; }
+nav ul li a:hover { color: #58a6ff; }
+
+#hero { background: radial-gradient(circle at center, #1c2128 0%, #0b0e11 100%); height: 350px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #30363d; }
+#hero h1 { font-size: 2.8rem; color: #f0f6fc; margin-bottom: 15px; }
+.main-tags span { background: #238636; color: white; padding: 5px 15px; border-radius: 6px; margin: 5px; font-weight: bold; font-size: 0.85rem; }
+
+#certificates { padding: 60px 0; background: #0b0e11; }
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 0 5%; }
+
+.cert-card { 
+    background: #161b22; 
+    border: 1px solid #30363d; 
+    border-radius: 12px; 
+    padding: 35px 20px; 
+    position: relative; 
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.cert-card:hover { 
+    transform: translateY(-12px); 
+    border-color: #58a6ff; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5); 
+}
+
+.cert-card.special { border: 2px solid #f85149; box-shadow: 0 0 15px rgba(248, 81, 73, 0.1); }
+.cert-icon { font-size: 3rem; margin-bottom: 20px; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2)); }
+
+.cert-card h3 a { text-decoration: none; color: #f0f6fc; transition: 0.3s; }
+.cert-card h3 a:hover { color: #58a6ff; }
+
+.badge { position: absolute; top: 15px; right: 15px; padding: 4px 12px; border-radius: 6px; color: white; font-size: 0.7rem; font-weight: bold; }
+.red { background: #f85149; }
+.green { background: #238636; }
+.purple { background: #8957e5; }
+
+footer { background: #161b22; color: #8b949e; padding: 30px; border-top: 1px solid #30363d; font-size: 0.9rem; }
+/* تنسيق صفحة المعاينة بالكامل */
+.view-body {
+    background: #0b0e11;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* حاوية الشهادة */
+.cert-container {
+    width: 100%;
+    max-width: 1200px; /* أقصى عرض مريح للعين */
+    flex-grow: 1; /* تجعل الحاوية تأخذ بقية مساحة الصفحة */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* الإطار الذي يعرض الـ PDF */
+.viewer-frame {
+    width: 100%;
+    height: 85vh; /* تأخذ 85% من ارتفاع الشاشة */
+    border: 2px solid #30363d;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* تنسيق العناوين والأزرار */
+.cert-title {
+    color: #58a6ff;
+    margin-bottom: 20px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.btn-view {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: 'Cairo', sans-serif;
+    transition: 0.3s;
+}
+
+.back-btn { background: #30363d; color: white; }
+.download-btn { background: #238636; color: white; }
+.project-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 10px;
+    text-align: center; /* لجعل الأيقونة والنصوص في المنتصف */
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}

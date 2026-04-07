@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>عرض شهادة الأمن السيبراني</title>
+    <style>
+        body { font-family: 'Cairo', sans-serif; background: #0b0e11; color: white; text-align: center; padding: 20px; }
+        .controls { margin-bottom: 20px; display: flex; justify-content: center; gap: 15px; }
+        .btn { padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+        .back { background: #30363d; color: white; }
+        .download { background: #238636; color: white; }
+        .viewer { width: 95%; height: 80vh; border-radius: 10px; background: white; }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <a href="index.html" class="btn back">← العودة</a>
+        <a href="basics.pdf" download class="btn download">📥 تحميل PDF</a>
+    </div>
+    <iframe src="basics.pdf" class="viewer"></iframe>
+</body>
+</html>
