@@ -2,21 +2,75 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>عرض شهادة الأمن السيبراني</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-ar="عرض شهادة الأمن السيبراني" data-en="View Cybersecurity Certificate">عرض شهادة الأمن السيبراني</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body { font-family: 'Cairo', sans-serif; background: #0b0e11; color: white; text-align: center; padding: 20px; }
-        .controls { margin-bottom: 20px; display: flex; justify-content: center; gap: 15px; }
-        .btn { padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+        /* تنسيقات إضافية خاصة بصفحة العرض فقط */
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            background: #0b0e11; 
+            color: white; 
+            text-align: center !important; 
+            padding: 20px; 
+        }
+        .controls { 
+            margin-bottom: 20px; 
+            display: flex; 
+            justify-content: center; 
+            gap: 15px; 
+        }
+        .btn { 
+            padding: 10px 25px; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            font-weight: bold; 
+            transition: 0.3s; 
+            display: inline-flex;
+            align-items: center;
+        }
         .back { background: #30363d; color: white; }
+        .back:hover { background: #444c56; }
         .download { background: #238636; color: white; }
-        .viewer { width: 95%; height: 80vh; border-radius: 10px; background: white; }
+        .download:hover { background: #2ea043; }
+        
+        .viewer { 
+            width: 95%; 
+            height: 85vh; 
+            border-radius: 12px; 
+            background: white; 
+            border: 2px solid #30363d;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
     </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="controls">
-        <a href="index.html" class="btn back">← العودة</a>
-        <a href="career.pdf" download class="btn download">📥 تحميل PDF</a>
+        <a href="index.html" class="btn back" data-ar="← العودة" data-en="← Back">← العودة</a>
+        <a href="career.pdf" download class="btn download" data-ar="📥 تحميل PDF" data-en="📥 Download PDF">📥 تحميل PDF</a>
     </div>
+
     <iframe src="career.pdf" class="viewer"></iframe>
+
+    <script>
+    // 1. جلب الإعدادات المحفوظة من الذاكرة (localStorage)
+    const savedTheme = localStorage.getItem('prefTheme') || 'dark';
+    const savedLang = localStorage.getItem('prefLang') || 'ar';
+
+    // 2. تطبيق الثيم فوراً
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    // 3. تطبيق اللغة والاتجاهات فوراً
+    document.documentElement.lang = savedLang;
+    document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
+
+    // 4. ترجمة الأزرار (العودة والتحميل) إذا كانت تحتوي على data-ar
+    document.querySelectorAll('[data-ar]').forEach(el => {
+        el.innerText = el.getAttribute(`data-${savedLang}`);
+    });
+</script>
+
 </body>
 </html>
