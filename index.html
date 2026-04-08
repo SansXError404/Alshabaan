@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إبراهيم الشبعان | الأمن السيبراني</title>
+    <title data-ar="إبراهيم الشبعان | الأمن السيبراني" data-en="Ibrahim Alshabaan | Cybersecurity">إبراهيم الشبعان | الأمن السيبراني</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -11,112 +11,144 @@
 
     <header>
         <nav>
-            <div class="logo">إبراهيم الشبعان</div>
+            <div class="logo" data-ar="إبراهيم الشبعان" data-en="Ibrahim Alshabaan">إبراهيم الشبعان</div>
             <ul>
-                <li><a href="#hero">الرئيسية</a></li>
-                <li><a href="#certificates">إنجازاتي</a></li>
+                <li><a href="#hero" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                <li><a href="#certificates" data-ar="إنجازاتي" data-en="Achievements">إنجازاتي</a></li>
+                <li><a href="#portfolio" data-ar="مشاريعي" data-en="Projects">مشاريعي</a></li>
+                <li><button id="themeToggle" class="lang-btn" style="background: #30363d; margin-left: 10px;">🌙</button></li>
+                <li><button id="langToggle" class="lang-btn">English</button></li>
             </ul>
         </nav>
     </header>
 
     <section id="hero">
-        <h1>إبراهيم خليل الشبعان</h1>
-        <p>طالب ثانوي | متخصص في الأمن السيبراني وتصميم الألعاب</p>
+        <h1 data-ar="إبراهيم خليل الشبعان" data-en="Ibrahim Khalil Alshabaan">إبراهيم خليل الشبعان</h1>
+        <p data-ar="طالب ثانوي | متخصص في الأمن السيبراني وتصميم الألعاب" data-en="High School Student | Cybersecurity & Game Design Specialist">طالب ثانوي | متخصص في الأمن السيبراني وتصميم الألعاب</p>
     </section>
 
     <section id="certificates">
-        <div class="container">
-            <h2>سجل الشهادات (اضغط للعرض والتحميل)</h2>
-            <div class="cert-grid">
+        <h2 data-ar="سجل الشهادات" data-en="Certificates Record" style="margin-bottom: 30px;">سجل الشهادات</h2>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <span class="badge red" data-ar="تخصص كامل" data-en="Full Specialization">تخصص كامل</span>
+                <div class="cert-icon">🛡️</div>
+                <h3 data-ar="تخصص الأمن السيبراني" data-en="Cybersecurity Specialization">تخصص الأمن السيبراني</h3>
+                <a href="view-cyber.html" class="project-link" data-ar="عرض الشهادة" data-en="View Certificate">عرض الشهادة</a>
+            </div>
 
-                <div class="cert-card special">
-                    <div class="cert-icon">🛡️</div>
-                    <span class="badge red">تخصص كامل</span>
-                    <h3><a href="view-cyber.html">تخصص الأمن السيبراني</a></h3>
-                    <p>برنامج شامل من منصة إدراك.</p>
-                </div>
+            <div class="cert-card">
+                <span class="badge purple" data-ar="دورة" data-en="Course">دورة</span>
+                <div class="cert-icon">🎮</div>
+                <h3 data-ar="تصميم الألعاب الإلكترونية" data-en="Game Design">تصميم الألعاب الإلكترونية</h3>
+                <a href="view-games.html" class="project-link" data-ar="عرض الشهادة" data-en="View Certificate">عرض الشهادة</a>
+            </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">🎮</div>
-                    <span class="badge purple">دورة</span>
-                    <h3><a href="view-games.html">تصميم الألعاب الإلكترونية</a></h3>
-                    <p>الأسس الأكاديمية لتصميم الألعاب.</p>
-                </div>
+            <div class="cert-card">
+                <span class="badge green" data-ar="دورة" data-en="Course">دورة</span>
+                <div class="cert-icon">🔐</div>
+                <h3 data-ar="حماية الأنظمة" data-en="System Protection">حماية الأنظمة</h3>
+                <a href="view-protect.html" class="project-link" data-ar="عرض الشهادة" data-en="View Certificate">عرض الشهادة</a>
+            </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">🔐</div>
-                    <span class="badge green">دورة</span>
-                    <h3><a href="view-protect.html">حماية الأنظمة من الاختراقات</a></h3>
-                    <p>طرق الحماية وأساليب الاختراق.</p>
-                </div>
+            <div class="cert-card">
+                <span class="badge green" data-ar="دورة" data-en="Course">دورة</span>
+                <div class="cert-icon">🛠️</div>
+                <h3 data-ar="تقنيات الهجوم والإختراق" data-en="Attack Techniques">تقنيات الهجوم والإختراق</h3>
+                <a href="view-attack.html" class="project-link" data-ar="عرض الشهادة" data-en="View Certificate">عرض الشهادة</a>
+            </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">🛠️</div>
-                    <span class="badge green">دورة</span>
-                    <h3><a href="view-attack.html">تقنيات الهجوم والإختراق</a></h3>
-                    <p>التعرف على أدوات Kali Linux.</p>
-                </div>
+            <div class="cert-card">
+                <span class="badge green" data-ar="دورة" data-en="Course">دورة</span>
+                <div class="cert-icon">📊</div>
+                <h3 data-ar="المسار الوظيفي" data-en="Career Path">المسار الوظيفي</h3>
+                <a href="view-career.html" class="project-link" data-ar="عرض الشهادة" data-en="View Certificate">عرض الشهادة</a>
+            </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">📊</div>
-                    <span class="badge green">دورة</span>
-                    <h3><a href="view-career.html">المسار الوظيفي</a></h3>
-                    <p>الأدوار الوظيفية في الأمن السيبراني.</p>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon">💡</div>
-                    <span class="badge green">دورة</span>
-                    <h3><a href="view-basics.html">أساسيات الأمن</a></h3>
-                    <p>المفاهيم الأساسية والمصطلحات.</p>
-                </div>
-
+            <div class="cert-card">
+                <span class="badge green" data-ar="دورة" data-en="Course">دورة</span>
+                <div class="cert-icon">💡</div>
+                <h3 data-ar="أساسيات الأمن" data-en="Security Basics">أساسيات الأمن</h3>
+                <a href="view-basics.html" class="project-link" data-ar="عرض الشهادة" data-en="View Certificate">عرض الشهادة</a>
             </div>
         </div>
     </section>
+
     <section id="portfolio">
-    <div class="container">
-        <h2 class="section-title">مشاريع ومواقع سابقة</h2>
+        <h2 data-ar="مشاريع ومواقع سابقة" data-en="Previous Projects" style="margin: 40px 0;">مشاريع ومواقع سابقة</h2>
         <div class="portfolio-grid">
-
             <div class="project-card">
-                <div class="project-info">
-                    <div class="project-icon">🇵🇸</div>
-                    <h3>Free Palestine</h3>
-                    <p>موقع تعريفي يدعم القضية الفلسطينية، تم تصميمه بواجهة بسيطة ورسالة قوية.</p>
-                    <a href="https://sansxerror404.github.io/Free-Palestine/" target="_blank" class="project-link">استعراض المشروع ←</a>
-                </div>
+                <div class="project-icon">🇵🇸</div>
+                <h3 data-ar="فلسطين حرة" data-en="Free Palestine">فلسطين حرة</h3>
+                <p data-ar="رسمه لعلم فلسطين بالاكواد" data-en="A site supporting the Palestinian cause">موقع تعريفي يدعم القضية الفلسطينية</p>
+                <a href="https://sansxerror404.github.io/Free-Palestine/" target="_blank" class="project-link" data-ar="زيارة" data-en="Visit">زيارة</a>
             </div>
 
             <div class="project-card">
-                <div class="project-info">
-                    <div class="project-icon">🍔</div>
-                    <h3>Food Project</h3>
-                    <p>واجهة موقع مخصص للأطعمة، يركز على تجربة المستخدم وعرض القوائم بشكل جذاب.</p>
-                    <a href="https://sansxerror404.github.io/food/" target="_blank" class="project-link">استعراض المشروع ←</a>
-                </div>
+                <div class="project-icon">🍔</div>
+                <h3 data-ar="مشروع الطعام" data-en="Food Project">مشروع الطعام</h3>
+                <p data-ar="واجهة موقع مخصص للأطعمة" data-en="Food website interface">واجهة موقع مخصص للأطعمة</p>
+                <a href="https://sansxerror404.github.io/food/" target="_blank" class="project-link" data-ar="زيارة" data-en="Visit">زيارة</a>
             </div>
 
             <div class="project-card">
-                <div class="project-info">
-                    <div class="project-icon">🔐</div>
-                    <h3>Login Interface</h3>
-                    <p>تصميم صفحة تسجيل دخول آمنة واحترافية مع التركيز على تنسيق الحقول والاستجابة.</p>
-                    <a href="https://sansxerror404.github.io/Login/" target="_blank" class="project-link">استعراض المشروع ←</a>
-                </div>
+                <div class="project-icon">🔐</div>
+                <h3 data-ar="واجهة تسجيل الدخول" data-en="Login Interface">واجهة تسجيل الدخول</h3>
+                <p data-ar="تصميم صفحة دخول احترافية" data-en="Professional login page design">تصميم صفحة دخول احترافية</p>
+                <a href="https://sansxerror404.github.io/Login/" target="_blank" class="project-link" data-ar="زيارة" data-en="Visit">زيارة</a>
             </div>
 
             <div class="project-card">
-                <div class="project-info">
-                    <div class="project-icon">👤</div>
-                    <h3>Ibrahim Site</h3>
-                    <p>نسخة سابقة من الموقع الشخصي لاستعراض المهارات والتعريف بالهوية الرقمية.</p>
-                    <a href="https://sansxerror404.github.io/ibrahim/" target="_blank" class="project-link">استعراض المشروع ←</a>
-                </div>
+                <div class="project-icon">👤</div>
+                <h3 data-ar="موقع إبراهيم" data-en="Ibrahim Site">موقع إبراهيم</h3>
+                <p data-ar="  " data-en="Previous version of the site">النسخة السابقة من الموقع</p>
+                <a href="https://sansxerror404.github.io/ibrahim/" target="_blank" class="project-link" data-ar="زيارة" data-en="Visit">زيارة</a>
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
+
+    <script>
+        const langToggle = document.getElementById('langToggle');
+        const themeToggle = document.getElementById('themeToggle');
+
+        // وظيفة تطبيق اللغة
+        function applyLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            langToggle.textContent = lang === 'ar' ? 'English' : 'العربية';
+
+            document.querySelectorAll('[data-ar]').forEach(el => {
+                const text = el.getAttribute(`data-${lang}`);
+                if (text) el.innerText = text;
+            });
+            localStorage.setItem('prefLang', lang);
+        }
+
+        // وظيفة تطبيق الثيم
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+            localStorage.setItem('prefTheme', theme);
+        }
+
+        // تحميل الإعدادات المحفوظة عند فتح الموقع
+        const savedLang = localStorage.getItem('prefLang') || 'ar';
+        const savedTheme = localStorage.getItem('prefTheme') || 'dark';
+        
+        applyLanguage(savedLang);
+        applyTheme(savedTheme);
+
+        // أحداث الضغط على الأزرار
+        langToggle.addEventListener('click', () => {
+            const newLang = document.documentElement.lang === 'ar' ? 'en' : 'ar';
+            applyLanguage(newLang);
+        });
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(newTheme);
+        });
+    </script>
 </body>
 </html>
